@@ -551,6 +551,7 @@ h6 {
   background: rgba(174, 190, 207, 0.15);
   padding: 0.625rem 1rem;
   width: 100%;
+  color: #fff;
 }
 
 .footer__news .footer-form .input::-webkit-input-placeholder {
@@ -839,12 +840,104 @@ h6 {
 .find__t-form .content__bottom {
   padding-top: 26px;
   padding-bottom: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.find__t-form .content__bottom .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #157CEC;
+  position: relative;
+  padding-right: 4px;
+}
+
+.find__t-form .content__bottom .link span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 6px;
+}
+
+.find__t-form .content__bottom .pagging {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.find__t-form .content__bottom .pagging__arrow img {
+  top: 4px;
 }
 
 .find__t-form .content__bottom .pagging__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 20px;
+}
+
+.find__t-form .content__bottom .pagging__list li {
+  margin-right: 6px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.find__t-form .content__bottom .pagging__list li ._active {
+  background: rgba(21, 124, 236, 0.2);
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.find__t-form .content__bottom .pagging__list li:last-child {
+  margin-right: 0;
+}
+
+.find__t-form .content__bottom .pagging__list__item {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 143%;
 }
 
 .find__t-form table {
@@ -1005,17 +1098,17 @@ h6 {
 }
 
 .find_p-item input {
-  max-width: 139px;
+  width: 139px;
   padding: 10px 15px;
   background: rgba(0, 0, 0, 0.15);
 }
 
-.find_p-buttom {
+.find_p-button {
   width: 100%;
   position: relative;
 }
 
-.find_p-buttom:after {
+.find_p-button:after {
   content: "";
   background: url("../img/svg/search.svg") no-repeat;
   display: inline-block;
@@ -1029,7 +1122,7 @@ h6 {
   right: 70px;
 }
 
-.find_p-buttom button {
+.find_p-button button {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
   padding-top: 10px;
@@ -2281,6 +2374,29 @@ input .select-container {
     padding: 21px 21px 0px 21px;
   }
 
+  .find__t-form .content__bottom {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .find__t-form .content__bottom .pagging__list {
+    margin: 0 12px;
+  }
+
+  .find__t-form .content__bottom .pagging__list li {
+    width: 25px;
+    height: 25px;
+  }
+
+  .find__t-form .content__bottom .pagging__list li ._active {
+    width: 25px;
+    height: 25px;
+  }
+
+  .find__t-form .content__bottom .pagging__list li {
+    margin-right: 6px;
+  }
+
   .find__t-form .Estimated,
   .find__t-form .Gate {
     display: none;
@@ -2290,11 +2406,13 @@ input .select-container {
     display: none;
   }
 
-  .find_p-item input {
-    width: 100%;
+  .find_p-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 
-  .find_p-buttom:after {
+  .find_p-button:after {
     display: none;
   }
 
@@ -2322,6 +2440,14 @@ input .select-container {
 }
 
 @media (max-width: 29.99875em) {
+  .find_p-body {
+    gap: 15px;
+  }
+
+  .find_p-item input {
+    width: 100%;
+  }
+
   .find__forms-tabs .title {
     display: none;
   }
