@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Airport</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20230416163617">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<div class="header__logo">
+						<a href="index.html"><img src="img/svg/logo.svg" alt="logo"></a>
+					</div>
+					<div class="header__menu menu">
+
+						<div class="header__search">
+							<!-- <input type="search" value=""> -->
+							<a href="#"><img src="img/svg/search.svg" alt="search"></a>
+						</div>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="arrivals.html" class="menu__link">Arrivals</a></li>
+								<li class="menu__item"><a href="departures.html" class="menu__link">Departures</a></li>
+								<li class="menu__item"><a href="terminal.html" class="menu__link">Terminal map</a></li>
+								<li class="menu__item"><a href="parking.html" class="menu__link">LAX Parking</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="fullpage">
+				<div class="fullpage__container">
+					<div class="fullpage__body">
+						<div class="fullpage-left">
+							<div class="fullpage__weather">
+								<div class="weather" id="weather">
+									<div class="weather__body">
+										<div class="weather__block">
+											<div class="weather__time weather-pad">5:41 pm PDT | </div>
+											<div class="weather__date weather-pad">Thu 15 | </div>
+											<div class="weather__day">Sunny</div>
+										</div>
+										<img src="img/svg/sun.svg" alt="sun">
+									</div>
+								</div>
+								<p>Clear skies. Low 64F. Winds light and variable</p>
+							</div>
+							<h1>Find flights in and out<br>
+								of LAX airport</h1>
+							<div class="progress__block">
+								<div class="progress__item">
+									<progress id="find" max="100" value="40"> 40% </progress>
+									<label for="find">Find flights</label>
+								</div>
+								<div class="progress__item">
+									<progress id="park" max="100" value="100"> 100% </progress>
+									<label for="park">Park your car</label>
+								</div>
+								<div class="progress__item">
+									<progress id="plan" max="100" value="100"> 100% </progress>
+									<label for="plan">Plan your trip</label>
+								</div>
+							</div>
+						</div>
+						<div class="fullpage__right">
+							<div class="fullpage__right-body">
+								<div class="fullpage__right-title">
+									<div class="status__block">
+										<img src="img/svg/window.svg" alt="">
+										<p>Live LAX flights status</p>
+									</div>
+									<img src="img/svg/arrows.svg" alt="">
+								</div>
+								<div class="fullpage__right-main">
+									<ul class="right-main-list">
+										<li>
+											<h3>Arrival Delays</h3>
+											<p>Arrival traffic is experiencing airborne delays of 15 minutes or less.</p>
+										</li>
+										<li>
+											<h3>Departure Delays</h3>
+											<p>Traffic is experiencing gate hold and taxi delays lasting 15 minutes or less.</p>
+										</li>
+										<li>
+											<h3>Delays by Destination</h3>
+											<p>No destination-specific delays are being reported.
+											</p>
+										</li>
+
+									</ul>
+								</div>
+								<div class="fullpage__right-bottom">
+									<div class="title">
+										<img src="img/svg/toll.svg" alt="toll">
+										<p>Last updated: 12:18 pm, 15 Sep 2022</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="find">
+				<div class="find__container">
+					<div class="find__body">
+						<div class="find__tpl">
+							<div class="find_t">
+								<!-- find__t-->
+								<form action="#" class="form__find-tabs find__t-form">
+									<input class="input-tabs" type="radio" name="tabs" id="tab-1" checked>
+									<input class="input-tabs" type="radio" name="tabs" id="tab-2">
+									<label for="tab-1" class="tab">
+										<img src="img/svg/plain_ar.svg" alt="plain_ar">
+										<p class="ar">Arrivals</p>
+									</label>
+									<label for="tab-2" class="tab">
+										<img src="img/svg/plain_dep.svg" alt="plain_dep">
+										<p class="dep">Departures</p>
+									</label>
+									<div class="content content-1">
+										<div class="content-flex">
+											<table>
+												<thead>
+													<tr>
+														<th>Flight</th>
+														<th>From</th>
+														<th>Scheduled</th>
+														<th class="Estimated">Estimated</th>
+														<th class="Gate">Gate</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="color-blue">DL1425</td>
+														<td class="span">Tampa <span>TPA</span></td>
+														<td>09:06</td>
+														<td class="Estimated">08:51</td>
+														<td class="Gate">5 54B</td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">UA1295</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+												</tbody>
+
+											</table>
+										</div>
+										<div class="content__bottom">
+											<div class="pagging">
+												<a href="" class="pagging__arrow"></a>
+												<ul class="pagging__list">
+													<li>
+														<a href="" class="pagging__item _active">1</a>
+													</li>
+													<li>
+														<a href="" class="pagging__item">2</a>
+													</li>
+													<li>
+														<a href="" class="pagging__item">3</a>
+													</li>
+
+												</ul>
+												<a href="" class="pagging__arrow"></a>
+											</div>
+										</div>
+
+
+									</div>
+									<div class="content content-2">
+										<div class="content-flex">
+											<table>
+												<thead>
+													<tr>
+														<th>Flight</th>
+														<th>From</th>
+														<th>Scheduled</th>
+														<th class="Estimated">Estimated</th>
+														<th class="Gate">Gate</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="color-blue">DL1425</td>
+														<td class="span">Tampa <span>TPA</span></td>
+														<td>09:06</td>
+														<td class="Estimated">08:51</td>
+														<td class="Gate">5 54B</td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">UA1295</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+													<tr>
+														<td class="color-blue">OO5408</td>
+														<td class="span">Kauai Island <span>HNL</span></td>
+														<td>08:50</td>
+														<td class="Estimated">08:50 </td>
+														<td class="Gate">5 56 </td>
+														<td class="aft"> <span>Landed</span> </td>
+													</tr>
+												</tbody>
+
+											</table>
+										</div>
+									</div>
+								</form>
+								<!-- find__t-->
+							</div>
+							<div class="find_pl">
+								<div class="find_p">
+									<form action="#" class="find_p-form">
+										<div class="title">
+											<span>P</span>
+											<h2>Book a parking</h2>
+										</div>
+										<div class="find_p-body">
+											<div class="find_p-item">
+												<label for="park_dat">Entry date</label>
+												<input id="park_dat" type="text">
+											</div>
+											<div class="find_p-item">
+												<label for="park_t">Entry time</label>
+												<input id="park_t" type="text">
+											</div>
+											<div class="find_p-item">
+												<label for="park_b">Exit date</label>
+												<input id="park_b" type="text">
+											</div>
+											<div class="find_p-item">
+												<label for="park_c">Exit time</label>
+												<input id="park_c" type="">
+											</div>
+											<div class="find_p-buttom">
+												<button type="submit">Search parking</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="find_l">
+									<h2>Reserve airport parking spot and get</h2>
+									<ul class="find_l-list">
+										<li>Lowest Online Price</li>
+										<li>Guaranteed Reservation</li>
+										<li>LAX Shuttle to Terminals 24h</li>
+										<li>Safe and Secure Lot</li>
+										<ul />
+								</div>
+							</div>
+						</div>
+						<!-- форма с табами -->
+						<div class="find__forms-tabs">
+							<div class="title">
+								<h2>Find your flight</h2>
+								<p>Find flights in and out of LAX airport</p>
+							</div>
+							<form action="#" class="form__find-tabs ">
+								<input class="input-tabs" type="radio" name="tabs" id="tab-3" checked>
+								<input class="input-tabs" type="radio" name="tabs" id="tab-4">
+								<label for="tab-3" class="tab">
+									<img src="img/svg/plain_ar.svg" alt="plain_ar">
+									<p class="ar">Arrivals</p>
+								</label>
+								<label for="tab-4" class="tab">
+									<img src="img/svg/plain_dep.svg" alt="plain_dep">
+									<p class="dep">Departures</p>
+								</label>
+								<div class="content content-3">
+									<div class="content-flex">
+										<div class="content-item a">
+											<label for="city">City or airport code</label>
+											<input id="city" type="text" name="city">
+										</div>
+										<div class="content-item b">
+											<label for="flight_num">Flight number</label>
+											<input id="flight_num" type="text" name="city">
+										</div>
+										<div class="content-item c">
+											<label for="flight_dat">Flight date</label>
+											<input id="flight_dat" class="form-control" id="airdatepicker" type="text" name="">
+										</div>
+										<div class="content-item d">
+											<label for="optin">Airline (optional)</label>
+											<input id="optin" type="text" name="city">
+										</div>
+										<div class="content-item e button-item">
+											<button type="submit">Search flight</button>
+										</div>
+									</div>
+
+
+
+								</div>
+								<div class="content content-4">
+
+									<div class="content-flex">
+										<div class="content-item">
+											<label for="city">City or airport code</label>
+											<input id="city" type="text" name="" class="">
+										</div>
+										<div class="content-item">
+											<label for="flight_num">Flight number</label>
+											<input id="flight_num" type="text" name="">
+										</div>
+										<div class="content-item">
+											<label for="flight_dat">Flight date</label>
+											<input id="flight_dat" class="" type="text" name="">
+										</div>
+										<div class="content-item">
+											<label for="optin">Airline (optional)</label>
+											<input id="optin" type="text" name="">
+										</div>
+										<div class="content-item button-item">
+											<button type="submit">Search flight</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- форма с табами -->
+					</div>
+				</div>
+			</div>
+
+			<div class="laxterminal">
+				<div class="laxterminal__container">
+					<div class="laxterminal__body">
+						<div class="laxterminal__function">
+							<div class="laxterminal__title">
+								<h2>LAX<br>Terminals <span>Map</span></h2>
+								<p>Click on the Terminals to view Airlines</p>
+							</div>
+							<div class="laxterminal-adapt"></div>
+							<ul class="laxterminal__list">
+								<li class="term-link"><span>Terminal 1</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 2</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 3</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 4</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 5</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 6</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 7</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Terminal 8</span><img src="img/svg/arrow__term.svg" alt=""></li>
+								<li class="term-link"><span>Tom Bradley International Terminal</span><img src="img/svg/arrow__term.svg" alt=""></li>
+							</ul>
+						</div>
+						<div class="laxterminal-img">
+							<picture><source srcset="img/block/01.webp" type="image/webp"><img data-da=".laxterminal-adapt,456,1" src="img/block/01.jpg" alt=""></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="plantrip">
+				<div class="plantrip__container">
+					<div class="plantrip__body">
+						<div class="plantrip__title">
+							<h2>Plan your trip</h2>
+							<p>Prepare your journey in time</p>
+						</div>
+						<div class="plan__card">
+							<div class="column__card">
+								<div class="column__card-body">
+									<div class="column__card-img">
+										<picture><source srcset="img/block/02.webp" type="image/webp"><img src="img/block/02.jpg" alt=""></picture>
+
+									</div>
+									<h2>Need parking?</h2>
+									<p>Reserve your ideal parking space at LAX Airport and leave your car in perfect safety</p>
+									<a href="#" target="_blank">Learn more</a>
+								</div>
+
+							</div>
+							<div class="column__card">
+								<div class="column__card-body">
+									<div class="column__card-img">
+										<picture><source srcset="img/block/03.webp" type="image/webp"><img src="img/block/03.jpg" alt=""></picture>
+
+									</div>
+									<h2>Need a lounge?</h2>
+									<p>Reserve your ideal parking space at LAX Airport and leave your car in perfect safety</p>
+									<a href="#" target="_blank">Learn more</a>
+								</div>
+
+							</div>
+							<div class="column__card">
+								<div class="column__card-body">
+									<div class="column__card-img">
+										<picture><source srcset="img/block/04.webp" type="image/webp"><img src="img/block/04.jpg" alt=""></picture>
+
+									</div>
+									<h2>Need a VIP service?</h2>
+									<p>Reserve your ideal parking space at LAX Airport and leave your car in perfect safety</p>
+									<a href="#" target="_blank">Learn more</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="newsletter">
+						<div class="newsletter__container">
+							<div class="newsletter__body">
+								<h2>Subscribe to our newsletter for</h2>
+								<form action="#" method="POST" class="newsletter-form">
+									<div class="news__radio">
+
+										<input type="checkbox" class="checkbox__label-news" id="Airport" name="Airport discounts">
+										<label class="news__label" for="Airport">
+											Airport discounts
+										</label>
+										<input type="checkbox" class="checkbox__label-news" id="Flight" name=" Flight updates">
+										<label class="news__label" for="Flight">
+											Flight updates
+										</label>
+										<input type="checkbox" class="checkbox__label-news" id="Important" name="Important updates">
+										<label class="news__label" for="Important">
+											Important updates
+										</label>
+									</div>
+
+									<input type="text" name="form[email]" data-error="Error" placeholder="Your email address" class="input">
+									<button type="submit" class="button">Subscribe</button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__column">
+						<div class="footer__logo">
+							<a href="index.html"><img src="img/svg/logo.svg" alt="logo"></a>
+						</div>
+						<div class="footer__page"></div>
+						<div class="footer__bottom">
+							<div class="footer__info">Legal information | Privacy policy</div>
+							<div class="footer__copy">© 2022 Los Angeles International Airport <br>
+								All rights reserved</div>
+						</div>
+					</div>
+					<!-- <div data-da=".footer__page,426,2" class="footer__adapt"> -->
+					<div class="footer__links" data-da=".footer__page,768,1">
+						<h2>Links</h2>
+						<ul class="list__link">
+							<li class="link-item"><a href="#" class="link">Arrivals</a></li>
+							<li class="link-item"><a href="#" class="link">Departures</a></li>
+							<li class="link-item"><a href="#" class="link">Baggage Check-in</a></li>
+							<li class="link-item"><a href="#" class="link">Address & Directions</a></li>
+							<li class="link-item"><a href="#" class="link">Airlines</a></li>
+							<li class="link-item"><a href="#" class="link">Airport & Parking</a></li>
+							<li class="link-item"><a href="#" class="link">Airport Codes</a></li>
+							<li class="link-item"><a href="#" class="link">Hotels</a></li>
+							<li class="link-item"><a href="#" class="link">Review Airline</a></li>
+							<li class="link-item"><a href="#" class="link">Terminal Map</a></li>
+							<li class="link-item"><a href="#" class="link">Airport information</a></li>
+						</ul>
+					</div>
+					<div class="footer__news" data-da=".footer__page,768,2">
+						<h2>Subscribe to our newsletter</h2>
+						<form action="#" method="POST" class="footer-form">
+							<input type="text" name="form[email]" data-error="Error" placeholder="Enter your email address" class="input">
+							<button type="submit" class="button">Subscribe</button>
+						</form>
+					</div>
+					<!-- </div> -->
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20230416163617"></script>
+
+</body>
+
+</html>
