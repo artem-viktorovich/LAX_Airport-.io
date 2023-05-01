@@ -2643,6 +2643,200 @@ input .select-container {
   color: #157CEC;
 }
 
+.formblockmap {
+  margin-top: -280px;
+}
+
+.formblockmap__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.block__formlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.form__content {
+  padding: 24px 32px 32px;
+  background: #157CEC;
+  -webkit-box-shadow: 6px 16px 30px rgba(53, 92, 194, 0.08);
+          box-shadow: 6px 16px 30px rgba(53, 92, 194, 0.08);
+  border-bottom-left-radius: 25px;
+  width: 60%;
+}
+
+.form__content .find_p-item {
+  color: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 47%;
+          flex: 0 1 47%;
+}
+
+.form__content .find_p-item input {
+  background: rgba 255, 255, 255, 0.15;
+  width: 100%;
+}
+
+.form__content .find_p-button button {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 15px;
+  color: #157CEC;
+  background: #FFFFFF;
+  font-weight: 600;
+}
+
+.form__content .find_p-button button:after {
+  content: "";
+  background: url("../img/svg/arrow_blue.svg") no-repeat;
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  margin-left: 6px;
+  position: relative;
+  top: 2px;
+}
+
+.slide__column {
+  background: rgba(37, 48, 74, 0.31);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  color: #fff;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+}
+
+.slide__column-body {
+  padding: 24px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slide__block-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide__block-item:not(:first-of-type) {
+  padding-top: 24px;
+}
+
+.slide__block-item:not(:last-of-type) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.slide__block-img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide__block-recerve {
+  margin-left: 16px;
+}
+
+.slide__block-recerve h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 6px;
+}
+
+.slide__block-recerve p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.map__block-yandex {
+  width: inherit;
+}
+
+.map .map {
+  width: inherit;
+}
+
+.no-webp .airportterm{
+  background: url("../img/bg/bg_bottom.png") bottom/cover no-repeat, url("../img/bg/04.png") 50%/cover no-repeat; }
+
+.airportterm__body {
+  color: #FFFFFF;
+}
+
+@supports (padding-top: clamp( 6.25rem , 5.7134146341rem  +  2.6829268293vw , 7.625rem )) {
+  .airportterm__body {
+    padding-top: clamp( 6.25rem , 5.7134146341rem  +  2.6829268293vw , 7.625rem );
+  }
+}
+
+@supports not (padding-top: clamp( 6.25rem , 5.7134146341rem  +  2.6829268293vw , 7.625rem )) {
+  .airportterm__body {
+    padding-top: calc(6.25rem + 1.375 * ($maxWidth - 20rem) / 51.25);
+  }
+}
+
+@supports (padding-bottom: clamp( 18.75rem , 15.0426829268rem  +  18.5365853659vw , 28.25rem )) {
+  .airportterm__body {
+    padding-bottom: clamp( 18.75rem , 15.0426829268rem  +  18.5365853659vw , 28.25rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 18.75rem , 15.0426829268rem  +  18.5365853659vw , 28.25rem )) {
+  .airportterm__body {
+    padding-bottom: calc(18.75rem + 9.5 * ($maxWidth - 20rem) / 51.25);
+  }
+}
+
+.airportterm__body h1 {
+  font-weight: 700;
+  line-height: 125%;
+  padding-top: 2.125rem;
+  padding-bottom: 1rem;
+}
+
+@supports (font-size: clamp( 2.5rem , 1.9634146341rem  +  2.6829268293vw , 3.875rem )) {
+  .airportterm__body h1 {
+    font-size: clamp( 2.5rem , 1.9634146341rem  +  2.6829268293vw , 3.875rem );
+  }
+}
+
+@supports not (font-size: clamp( 2.5rem , 1.9634146341rem  +  2.6829268293vw , 3.875rem )) {
+  .airportterm__body h1 {
+    font-size: calc(2.5rem + 1.375 * ($maxWidth - 20rem) / 51.25);
+  }
+}
+
+.airportterm__p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 @media (max-width: 61.99875em) {
   .menu__item {
     margin-right: 30px;
@@ -2782,6 +2976,17 @@ input .select-container {
 
   .work__block-text {
     gap: 20px;
+  }
+
+  .block__formlist {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .form__content {
+    width: 100%;
   }
 }
 
@@ -3028,8 +3233,16 @@ input .select-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .form__content .find_p-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 47%;
+            flex: 1 1 47%;
+  }
 }
 
 .webp .fullpage{ background: url(../img/bg/bg_bottom.webp) bottom/cover no-repeat, url(../img/bg/HERO_BG.webp) 50%/cover no-repeat; }
 
 .webp .depart{ background: url(../img/bg/bg_bottom.webp) bottom/cover no-repeat, url(../img/bg/05.webp) 50%/cover no-repeat; }
+
+.webp .airportterm{ background: url(../img/bg/bg_bottom.webp) bottom/cover no-repeat, url(../img/bg/04.webp) 50%/cover no-repeat; }

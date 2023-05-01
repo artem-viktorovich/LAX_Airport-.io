@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=bbca1236-7429-44c5-b54e-add0f752bab5&lang=ru_RU&_v=20230429210307" type="text/javascript
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=bbca1236-7429-44c5-b54e-add0f752bab5&lang=ru_RU&_v=20230501175344" type="text/javascript
     "></script> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230429210307">
-	<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A059045ac5ac18af874f0fd876e6bcd610ac03ad68a49137f40b3864b84fdd761&amp;width=1110&amp;height=404&amp;lang=ru_RU&amp;scroll=true&_v=20230429210307"></script> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230501175344">
+	<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A059045ac5ac18af874f0fd876e6bcd610ac03ad68a49137f40b3864b84fdd761&amp;width=1110&amp;height=404&amp;lang=ru_RU&amp;scroll=true&_v=20230501175344"></script> -->
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +46,101 @@
 		</header>
 
 		<main class="page">
+			<div class="airportterm">
+				<div class="airportterm__container">
+					<div class="airportterm__body">
+						<div class="airportterm__weather">
+							<div class="weather" id="weather">
+								<div class="weather__body">
+									<div class="weather__block">
+										<div class="weather__time weather-pad">5:41 pm PDT | </div>
+										<div class="weather__date weather-pad">Thu 15 | </div>
+										<div class="weather__day">Sunny</div>
+									</div>
+									<img src="img/svg/sun.svg" alt="sun">
+								</div>
+							</div>
+							<p>Clear skies. Low 64F. Winds light and variable</p>
+						</div>
+						<h1>LAX Airport Parking</h1>
+						<div class="airportterm__p">Fastest way to compare and book over 20 LAX parking lots</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="formblockmap">
+				<div class="formblockmap__container">
+					<div class="formblockmap__body">
+						<div class="block__formlist">
+							<div class="form__content">
+								<form action="#" class="find_p-form">
+
+									<div class="find_p-body">
+										<div class="find_p-item">
+											<label for="park_dat">Entry date</label>
+											<input id="park_dat" type="text">
+										</div>
+										<div class="find_p-item">
+											<label for="park_t">Entry time</label>
+											<input id="park_t" type="text">
+										</div>
+										<div class="find_p-item">
+											<label for="park_b">Exit date</label>
+											<input id="park_b" type="text">
+										</div>
+										<div class="find_p-item">
+											<label for="park_c">Exit time</label>
+											<input id="park_c" type="">
+										</div>
+										<div class="find_p-button">
+											<button type="submit">Search parking</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="slide__column">
+								<div class="slide__column-body">
+									<div class="slide__block-item">
+										<div class="slide__block-img">
+											<img src="img/svg/Traced.svg" alt="">
+										</div>
+										<div class="slide__block-recerve">
+											<h3>Best Price Guarantee</h3>
+											<p>Find our lowest airport parking rates, guaranteed</p>
+										</div>
+									</div>
+									<div class="slide__block-item">
+										<div class="slide__block-img">
+											<img src="img/svg/image_61_(Traced).svg" alt="">
+										</div>
+										<div class="slide__block-recerve">
+											<h3>Easy Booking</h3>
+											<p>Search, select and reserve - the fastest way to book your trip</p>
+										</div>
+									</div>
+									<div class="slide__block-item">
+										<div class="slide__block-img">
+											<img src="img/svg/image_62_(Traced).svg" alt="">
+										</div>
+										<div class="slide__block-recerve">
+											<h3>Free Cancellations</h3>
+											<p>If your plans change, cancel your reservation</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="map__block-yandex">
+							<div id="map">
+								<iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A059045ac5ac18af874f0fd876e6bcd610ac03ad68a49137f40b3864b84fdd761&amp;source=constructor" width="1110" height="404" frameborder="0"></iframe>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
 			<div class="parkgarage">
 				<div class="parkgarage__container">
 					<div class="parkgarage__body">
@@ -532,6 +627,38 @@
 							<div class="customers__card grid-item">
 								<picture><source srcset="img/block/“.webp" type="image/webp"><img src="img/block/“.png" alt="vector"></picture>
 								<div class="comments_top">
+									&#8221;“Great job. Coming back again.”&#8220;
+								</div>
+								<div class="comments_main"></div>
+								<div class="comments__bottom"><span>Kevin M Tyler,</span> parked at <a href="#"> WallyPark Premier Garage</a></div>
+							</div>
+							<div class="customers__card grid-item">
+								<picture><source srcset="img/block/“.webp" type="image/webp"><img src="img/block/“.png" alt="vector"></picture>
+								<div class="comments_top">
+									&#8221;“Great job. Coming back again.”&#8220;
+								</div>
+								<div class="comments_main"></div>
+								<div class="comments__bottom"><span>Kevin M Tyler,</span> parked at <a href="#"> WallyPark Premier Garage</a></div>
+							</div>
+							<div class="customers__card grid-item">
+								<picture><source srcset="img/block/“.webp" type="image/webp"><img src="img/block/“.png" alt="vector"></picture>
+								<div class="comments_top">
+									&#8221;“Great job. Coming back again.”&#8220;
+								</div>
+								<div class="comments_main"></div>
+								<div class="comments__bottom"><span>Kevin M Tyler,</span> parked at <a href="#"> WallyPark Premier Garage</a></div>
+							</div>
+							<div class="customers__card grid-item">
+								<picture><source srcset="img/block/“.webp" type="image/webp"><img src="img/block/“.png" alt="vector"></picture>
+								<div class="comments_top">
+									&#8221;“Great job. Coming back again.”&#8220;
+								</div>
+								<div class="comments_main"></div>
+								<div class="comments__bottom"><span>Kevin M Tyler,</span> parked at <a href="#"> WallyPark Premier Garage</a></div>
+							</div>
+							<div class="customers__card grid-item">
+								<picture><source srcset="img/block/“.webp" type="image/webp"><img src="img/block/“.png" alt="vector"></picture>
+								<div class="comments_top">
 									&#8221;I will park again if price is right, it was quick pick up and go&#8220;
 								</div>
 								<div class="comments_main">“Location is hard to find because signage was inadequate. Personnel helpful & friendly.
@@ -545,10 +672,7 @@
 				</div>
 			</div>
 
-			<!-- <div class="map__container">
-                    <div  id="map" class="map"></div>
-                </div>
-                 -->
+
 
 		</main>
 		<footer class="footer">
@@ -604,9 +728,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230429210307"></script>
-
-
-</body>
-
-</html>
+	<script src="js/app.min.js?_v=20230501175344"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+		< /body> <
+		/html>
